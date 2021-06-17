@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal animated icon</title>
+    <link rel="icon" href="2.jpeg">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgb(11, 11, 43);
+        }
+        
+        .main_box {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+        
+        .main_box::before {
+            position: absolute;
+            content: "Signal ON";
+            font-size: 28px;
+            color: white;
+            bottom: -43px;
+        }
+        
+        .dot {
+            width: 10%;
+            height: 10%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px white;
+            position: absolute;
+            background-color: white;
+        }
+        
+        .tawer {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: white;
+            clip-path: polygon(50% 0%, 26% 100%, 74% 100%);
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .parent,
+        .child,
+        .subchild {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 15px solid transparent;
+            border-left: 15px solid white;
+            border-right: 15px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: ani3 3s ease-out infinite;
+        }
+        
+        @keyframes ani3 {
+            0% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+            25% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+            50% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+            75% {
+                border-left: 15px solid white;
+                border-right: 15px solid white;
+            }
+            100% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+        }
+        
+        .child {
+            width: 80%;
+            height: 80%;
+            animation: ani2 3s ease-out infinite;
+        }
+        
+        @keyframes ani2 {
+            0% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+            25% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+            50% {
+                border-left: 15px solid white;
+                border-right: 15px solid white;
+            }
+            75% {
+                border-left: 15px solid white;
+                border-right: 15px solid white;
+            }
+            100% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+        }
+        
+        .subchild {
+            width: 65%;
+            height: 65%;
+            animation: ani1 3s ease-out infinite;
+        }
+        
+        @keyframes ani1 {
+            0% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+            25% {
+                border-left: 15px solid white;
+                border-right: 15px solid white;
+            }
+            50% {
+                border-left: 15px solid white;
+                border-right: 15px solid white;
+            }
+            75% {
+                border-left: 15px solid white;
+                border-right: 15px solid white;
+            }
+            100% {
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_box">
+        <div class="dot"></div>
+        <div class="tawer"></div>
+        <div class="parent">
+
+            <div class="child">
+
+                <div class="subchild"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
